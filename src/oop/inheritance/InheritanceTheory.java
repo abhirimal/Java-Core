@@ -48,5 +48,4 @@
     Ans: Multiple Inheritance is not supported in java because it leads to a diamond problem.
          We can implement multiple inheritance by using interface.
 
-
  */
