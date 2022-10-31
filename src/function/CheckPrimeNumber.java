@@ -9,17 +9,14 @@ import java.util.Scanner;
 
 public class CheckPrimeNumber {
 
-    public boolean checkPrime() {
+    boolean checkPrime(int testNumber) {
 
-        int n, count = 0;
+        int count = 0;
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter a number");
-        n = input.nextInt();
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= testNumber; i++) {
 
-            if (n % i == 0) {
+            if (testNumber % i == 0) {
                 count++;
             }
         }
@@ -38,7 +35,7 @@ public class CheckPrimeNumber {
 
         CheckPrimeNumber obj = new CheckPrimeNumber();
 
-        System.out.println(obj.checkPrime());
+        System.out.println(obj.checkPrime(5));
 
     }
 
