@@ -1,6 +1,7 @@
 /*
        ( WAP to illustrate the “this” keyword for following use case. )
     5. this can be passed as an argument in the constructor call.
+    this can be used to return the current class instance from the method
 
  */
 package this_keyword;
