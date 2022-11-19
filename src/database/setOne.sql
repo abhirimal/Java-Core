@@ -46,3 +46,9 @@
  */
 
         select * from jobs order by job_title desc;
+
+/*
+    9.	Display employees where the first name or last name starts with S.
+ */
+
+        select * from employees where first_name LIKE 'S%' or last_name like 'S%';
