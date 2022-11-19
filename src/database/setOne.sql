@@ -26,3 +26,10 @@
  */
 
         select * from employees where employee_id=150 or employee_id=160;
+
+/*
+    6.  Display first name, salary, commission pct, and hire date for employees
+            with salary less than 10000.
+ */
+
+        select first_name, salary, comission_pct,hire_date from employees where salary<10000;
