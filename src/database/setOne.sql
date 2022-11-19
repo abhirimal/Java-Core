@@ -52,3 +52,11 @@
  */
 
         select * from employees where first_name LIKE 'S%' or last_name like 'S%';
+
+/*
+    10.	Display details of the employees where commission percentage is null and salary in
+        the range 5000 to 10000 and department is 30.
+ */
+
+        select * from employees where comission_pct is null and department_id=30
+        and salary>=5000 and salary<=10000 ;
