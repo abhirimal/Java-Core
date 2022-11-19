@@ -20,3 +20,9 @@
     4.	Display employees who joined after 1st January 2008.
  */
         select * from employees where hire_date>"2008-01-01";
+
+/*
+    5.	Display details of employees with ID 150 or 160.
+ */
+
+        select * from employees where employee_id=150 or employee_id=160;
