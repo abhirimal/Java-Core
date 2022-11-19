@@ -71,3 +71,8 @@
  */
         delete from departments where department_id=20;
 
+/*
+    13.	Change job ID of employee 110 to IT_PROG(or 7) if the employee belongs to department 10
+ */
+
+        update employees set job_id=7 where employee_id=110 and department_id=10;
