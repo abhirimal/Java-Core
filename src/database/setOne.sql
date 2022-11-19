@@ -40,3 +40,9 @@
  */
         select job_title,max_salary-min_salary as difference
         from jobs where max_salary>=10000 and max_salary<=20000;
+
+/*
+    8.	Display details of jobs in the descending order of the title.
+ */
+
+        select * from jobs order by job_title desc;
