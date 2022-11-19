@@ -65,3 +65,9 @@
     11.	Change salary of employee 115 to 8000
  */
         update employees set salary=8000 where employee_id=115;
+
+/*
+    12.	Delete department 20.
+ */
+        delete from departments where department_id=20;
+
