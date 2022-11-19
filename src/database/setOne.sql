@@ -60,3 +60,8 @@
 
         select * from employees where comission_pct is null and department_id=30
         and salary>=5000 and salary<=10000 ;
+
+/*
+    11.	Change salary of employee 115 to 8000
+ */
+        update employees set salary=8000 where employee_id=115;
