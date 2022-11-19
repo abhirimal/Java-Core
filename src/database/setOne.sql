@@ -15,3 +15,8 @@
         select first_name,hire_date from employees
             join jobs on employees.job_id = jobs.job_id
                 where job_title="Salesman" or job_title="IT Programmer";
+
+/*
+    4.	Display employees who joined after 1st January 2008.
+ */
+        select * from employees where hire_date>"2008-01-01";
