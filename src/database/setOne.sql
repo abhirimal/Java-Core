@@ -8,3 +8,10 @@
  */
         select first_name, hire_date from employees
         where hire_date between '2002-01-01' and '2005-01-01';
+
+/*
+    3.	Display first name and join date of the employees who is either IT Programmer or Salesman.
+ */
+        select first_name,hire_date from employees
+            join jobs on employees.job_id = jobs.job_id
+                where job_title="Salesman" or job_title="IT Programmer";
