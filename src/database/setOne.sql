@@ -33,3 +33,10 @@
  */
 
         select first_name, salary, comission_pct,hire_date from employees where salary<10000;
+
+/*
+    7.	Display job Title, the difference between minimum and maximum salaries for jobs with max
+        salary in the range 10000 to 20000.
+ */
+        select job_title,max_salary-min_salary as difference
+        from jobs where max_salary>=10000 and max_salary<=20000;
