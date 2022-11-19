@@ -4,3 +4,10 @@
  */
         Select CONCAT(UPPER(SUBSTRING(first_name,1,1)),LOWER(SUBSTRING(first_name,2)))
             AS first_name from employees;
+/*
+    2.	Display first name and experience of the employees.
+ */
+        /* the output of datediff is in days, so divide it by 365 to get years*/
+        select first_name,datediff(end_date,start_date) /365
+            AS experience from employees
+                JOIN job_history on employees.employee_id=job_history.employee_id ;
