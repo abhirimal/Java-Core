@@ -20,3 +20,9 @@
             from departments
                 join employees on departments.manager_id=employees.manager_id
                     group by departments.manager_id ;
+
+/*
+    4.	Display the country ID and number of cities we have in the country.
+ */
+        select country_id, count(city) from locations
+            group by country_id;
