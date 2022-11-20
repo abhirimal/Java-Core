@@ -51,3 +51,11 @@
         select employee_id from job_history
             group by employee_id
                 having count(job_id)<1;
+
+/*
+    8.	Display job title and average salary for employees who did a job in the past.
+ */
+        select job_title, avg(salary) as average_salary from employees
+            inner join jobs on employees.employee_id=jobs.job_id
+                inner join job_history on employees.employee_id=job_history.employee_id
+                    group by employees.employee_id having count(job_history.job_id>1);
