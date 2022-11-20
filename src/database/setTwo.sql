@@ -26,3 +26,9 @@
  */
         select country_id, count(city) from locations
             group by country_id;
+/*
+    5.	Display average salary of employees in each department who have commission percentage.
+ */
+        select department_id, avg(salary) as Average
+            from employees where comission_pct is not null
+                group by department_id;
