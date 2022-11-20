@@ -40,3 +40,10 @@
         select employees.job_id, count(employee_id) as Total, max_salary-min_salary as difference
             from employees join jobs on employees.job_id = jobs.job_id
                 group by jobs.job_id;
+
+/*
+    7.	Display job ID for jobs with average salary more than 10000.
+ */
+        select job_id, avg(salary) as average from employees
+            group by job_id
+                having avg(salary)>10000;
