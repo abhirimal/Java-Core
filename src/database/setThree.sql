@@ -20,3 +20,11 @@
         select job_title,department_id, AVG(salary) as Average_Salary from employees
             inner join jobs on employees.job_id=jobs.job_id
                 group by job_title;
+
+/*
+    4.	Display department name, manager name, and salary of the manager for all managers whose experience is more than 5 years.
+ */
+            select department_name,first_name as manager_name, salary from employees
+                inner join departments on employees.department_id=departments.department_id
+                    inner join job_history on employees.employee_id=job_history.employee_id
+                        where datediff(end_date,start_date) /365>5;
