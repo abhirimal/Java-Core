@@ -59,3 +59,13 @@
             inner join jobs on employees.employee_id=jobs.job_id
                 inner join job_history on employees.employee_id=job_history.employee_id
                     group by employees.employee_id having count(job_history.job_id>1);
+
+/*
+    9.	Display country name, city, and number of departments where the department has more than 5 employees.
+ */
+        select country_name,city, count(employees.department_id) from departments
+            inner join locations on departments.location_id=locations.location_id
+                inner join countries on locations.country_id=countries.country_id
+                    inner join employees on employees.department_id=departments.department_id
+                        group by employees.department_id
+                            having count(employees.department_id)>5;
