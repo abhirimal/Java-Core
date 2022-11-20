@@ -36,3 +36,11 @@
             inner join departments on employees.department_id=departments.department_id
                 inner join locations on departments.location_id=locations.location_id
                     inner join countries on locations.country_id=countries.country_id;
+
+/*
+    6.	Display department name, average salary and number of employees with commission within the department.
+ */
+            select department_name, avg(salary) as average_salary, count(employee_id)
+                as total_employee from employees
+                    join departments on employees.department_id=departments.department_id
+                        group by departments.department_id;
