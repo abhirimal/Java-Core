@@ -28,3 +28,11 @@
                 inner join departments on employees.department_id=departments.department_id
                     inner join job_history on employees.employee_id=job_history.employee_id
                         where datediff(end_date,start_date) /365>5;
+
+/*
+    5.	Display employee name and country in which he is working.
+ */
+        select first_name,last_name,country_name from employees
+            inner join departments on employees.department_id=departments.department_id
+                inner join locations on departments.location_id=locations.location_id
+                    inner join countries on locations.country_id=countries.country_id;
