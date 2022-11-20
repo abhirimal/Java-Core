@@ -61,3 +61,10 @@
         select departments.department_name, count(employee_id) as Employees
             from employees join departments on departments.department_id=employees.department_id
                 group by departments.department_name;
+
+/*
+    10.	Display department name, employee first name, and city.
+ */
+        select department_name, first_name,city  from employees
+            inner join departments on employees.department_id=departments.department_id
+                inner join locations on departments.location_id=locations.location_id;
