@@ -44,3 +44,10 @@
                 as total_employee from employees
                     join departments on employees.department_id=departments.department_id
                         group by departments.department_id;
+
+/*
+    7.	Display employees who did not do any job in the past.
+ */
+        select employee_id from job_history
+            group by employee_id
+                having count(job_id)<1;
