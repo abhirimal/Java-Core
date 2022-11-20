@@ -86,3 +86,9 @@
         inner join departments on employees.department_id=departments.department_id
             inner join locations on departments.location_id=locations.location_id
                 where employees.employee_id=105;
+
+/*
+    12.	Display second largest salary of  employees
+ */
+        select salary from employees
+            order by salary desc limit 1,1;
