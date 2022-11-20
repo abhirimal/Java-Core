@@ -69,3 +69,12 @@
                     inner join employees on employees.department_id=departments.department_id
                         group by employees.department_id
                             having count(employees.department_id)>5;
+
+/*
+    10.	Display employee name, job title, start date, and end date of past jobs of all employees with commission percentage null.
+ */
+
+        select first_name,job_title,start_date,end_date from employees
+            inner join job_history on employees.employee_id=job_history.employee_id
+                inner join jobs on employees.job_id=jobs.job_id
+                    where employees.comission_pct is null;
