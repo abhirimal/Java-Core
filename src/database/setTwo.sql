@@ -32,3 +32,11 @@
         select department_id, avg(salary) as Average
             from employees where comission_pct is not null
                 group by department_id;
+
+/*
+    6.	Display job ID, number of employees, sum of salary, and difference between highest salary and
+        lowest salary of the employees of the job.
+ */
+        select employees.job_id, count(employee_id) as Total, max_salary-min_salary as difference
+            from employees join jobs on employees.job_id = jobs.job_id
+                group by jobs.job_id;
