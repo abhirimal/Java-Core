@@ -47,3 +47,11 @@
         select job_id, avg(salary) as average from employees
             group by job_id
                 having avg(salary)>10000;
+
+/*
+    8.	Display employee ID for employees who did more than one job in the past.
+ */
+
+        select employee_id from job_history
+            group by employee_id
+                having count(job_id)>1;
