@@ -78,3 +78,11 @@
             inner join job_history on employees.employee_id=job_history.employee_id
                 inner join jobs on employees.job_id=jobs.job_id
                     where employees.comission_pct is null;
+
+/*
+    11.	Display the city of employees whose employee ID is 105.
+ */
+    select city from employees
+        inner join departments on employees.department_id=departments.department_id
+            inner join locations on departments.location_id=locations.location_id
+                where employees.employee_id=105;
