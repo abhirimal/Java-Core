@@ -55,3 +55,9 @@
         select employee_id from job_history
             group by employee_id
                 having count(job_id)>1;
+/*
+    9.	Display department name and number of employees in the department.
+ */
+        select departments.department_name, count(employee_id) as Employees
+            from employees join departments on departments.department_id=employees.department_id
+                group by departments.department_name;
